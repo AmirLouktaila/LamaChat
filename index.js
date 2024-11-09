@@ -124,7 +124,7 @@ botly.on("message", async (senderId, message) => {
         botly.sendText({ id: senderId, text: "فيديو" });
     }
 });
-console.log(`text :${msgVoice}`)
+
 botly.on("postback", async (senderId, message, postback) => {
     if (message.postback) {
         if (postback == "") {

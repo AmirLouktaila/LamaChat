@@ -82,7 +82,7 @@ async function ChatLama(msg) {
     }
 
 }
-app.use(express.json({ verify: botly.getVerifySignature() }));
+app.use(express.json({ verify: botly.getVerifySignature(process.env.sig) }));
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/webhook", botly.router());
